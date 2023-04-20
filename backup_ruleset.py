@@ -1,3 +1,4 @@
+import json
 import sys
 
 from gql import gql, Client
@@ -68,4 +69,4 @@ params = {"ruleset": ruleset_name}
 
 # Execute the query on the transport
 result = client.execute(query, variable_values=params)
-print(result)
+print(json.dumps(result))
